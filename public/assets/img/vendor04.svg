@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="243.77" height="114.966" viewBox="0 0 243.77 114.966">
+  <g id="Group_4563" data-name="Group 4563" transform="translate(1 1)">
+    <g id="Group_4562" data-name="Group 4562" transform="translate(0 0)">
+      <ellipse id="Ellipse_514" data-name="Ellipse 514" cx="37.633" cy="37.633" rx="37.633" ry="37.633" transform="translate(36.046)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <ellipse id="Ellipse_515" data-name="Ellipse 515" cx="14.677" cy="14.677" rx="14.677" ry="14.677" transform="translate(0 81.958)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_378" data-name="Line 378" x1="22.013" y2="22.013" transform="translate(25.055 64.244)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_10222" data-name="Path 10222" d="M67.3,265.367a37.633,37.633,0,0,1,0-53.221l53.221,53.221" transform="translate(-20.227 -201.123)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_10223" data-name="Path 10223" d="M101.18,220.66l-4.7,13.85,8.747,11.721-14.624-.187-8.444,11.941L77.821,244.02l-13.966-4.341L75.8,231.234l-.187-14.624,11.721,8.747Z" transform="translate(-13.415 -197.113)" fill="#8b8b8b" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <text id="BABY_LOGO" data-name="BABY
+LOGO" transform="translate(132.769 29.861)" fill="#8b8b8b" font-size="35" font-family="Helvetica"><tspan letter-spacing="0.075em"><tspan x="0" y="0">BABY</tspan></tspan><tspan x="0" y="42" letter-spacing="0.075em">LOG</tspan><tspan y="42">O</tspan></text>
+    <text id="AMAZING_SLOGAN" data-name="AMAZING SLOGAN" transform="translate(47.769 109.966)" fill="#8b8b8b" font-size="18" font-family="Helvetica" letter-spacing="0.075em"><tspan x="0" y="0">AMAZING SLOGAN</tspan></text>
+  </g>
+</svg>

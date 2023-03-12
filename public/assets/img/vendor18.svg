@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="199" height="188.821" viewBox="0 0 199 188.821">
+  <g id="Group_4601" data-name="Group 4601" transform="translate(0 1.004)">
+    <g id="Group_4571" data-name="Group 4571" transform="translate(66.441 0)">
+      <g id="Group_4569" data-name="Group 4569">
+        <path id="Path_10228" data-name="Path 10228" d="M432.906,70.258a25.429,25.429,0,1,0-47.389,12.812,62.436,62.436,0,0,1,8.091,31.632v.634h27.74v-2.318a62.951,62.951,0,0,1,8.387-30.468A25.238,25.238,0,0,0,432.906,70.258Z" transform="translate(-370.636 -44.828)" fill="#8b8b8b" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_10229" data-name="Path 10229" d="M443.96,94.072H382.087a6.051,6.051,0,0,1-6.05-6.052h0a6.05,6.05,0,0,1,6.05-6.05H443.96a6.05,6.05,0,0,1,6.05,6.05h0A6.051,6.051,0,0,1,443.96,94.072Z" transform="translate(-376.037 -11.463)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Group_4570" data-name="Group 4570" transform="translate(0.152 82.609)">
+        <path id="Path_10230" data-name="Path 10230" d="M412.952,88.345a36.876,36.876,0,0,0-36.835,35.489h11.477a25.4,25.4,0,0,1,50.715,0h11.477A36.878,36.878,0,0,0,412.952,88.345Z" transform="translate(-376.117 -88.345)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <text id="BABY_LOGO" data-name="BABY LOGO" transform="translate(0 160.382)" fill="#8b8b8b" font-size="31" font-family="Helvetica"><tspan x="0" y="0" letter-spacing="0.075em">BABY LOG</tspan><tspan y="0">O</tspan></text>
+    <text id="AMAZING_SLOGAN" data-name="AMAZING SLOGAN" transform="translate(18.983 183.817)" fill="#8b8b8b" font-size="16" font-family="Helvetica" letter-spacing="0.075em"><tspan x="0" y="0">AMAZING SLOGAN</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="199" height="198.608" viewBox="0 0 199 198.608">
+  <g id="Group_4561" data-name="Group 4561" transform="translate(-0.362 1)">
+    <g id="Group_4560" data-name="Group 4560" transform="translate(34.634 0.001)">
+      <g id="Group_4558" data-name="Group 4558" transform="translate(22.1 88.875)">
+        <g id="Group_4556" data-name="Group 4556">
+          <ellipse id="Ellipse_512" data-name="Ellipse 512" cx="15.661" cy="15.661" rx="15.661" ry="15.661" fill="#8b8b8b" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_10217" data-name="Path 10217" d="M234.9,389.136a6.169,6.169,0,1,1,6.169-6.169A6.177,6.177,0,0,1,234.9,389.136Z" transform="translate(-219.235 -367.305)" fill="#fff" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="Group_4557" data-name="Group 4557" transform="translate(74.801)">
+          <ellipse id="Ellipse_513" data-name="Ellipse 513" cx="15.661" cy="15.661" rx="15.661" ry="15.661" fill="#8b8b8b" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          <path id="Path_10218" data-name="Path 10218" d="M274.3,389.136a6.169,6.169,0,1,1,6.17-6.169A6.177,6.177,0,0,1,274.3,389.136Z" transform="translate(-258.64 -367.305)" fill="#fff" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+      <g id="Group_4559" data-name="Group 4559">
+        <path id="Path_10219" data-name="Path 10219" d="M331.027,419.3a57.64,57.64,0,0,0-43.815-94.318v57.633H218.148A57.418,57.418,0,0,0,231.324,419.3" transform="translate(-206.639 -324.979)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_10220" data-name="Path 10220" d="M296.335,325.45v66.229H218.558" transform="translate(-206.27 -324.556)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_10221" data-name="Path 10221" d="M212.085,346.548h0a11.509,11.509,0,0,1,11.509,11.509v5.179" transform="translate(-212.085 -305.603)" fill="none" stroke="#8b8b8b" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <text id="BABY_LOGO" data-name="BABY LOGO" transform="translate(0.362 169.762)" fill="#8b8b8b" font-size="31" font-family="Helvetica" letter-spacing="0.075em"><tspan x="0" y="0">BABY LOGO</tspan></text>
+    <text id="AMAZING_SLOGAN" data-name="AMAZING SLOGAN" transform="translate(19.449 193.608)" fill="#8b8b8b" font-size="16" font-family="Helvetica" letter-spacing="0.075em"><tspan x="0" y="0">AMAZING SLOGAN</tspan></text>
+  </g>
+</svg>
