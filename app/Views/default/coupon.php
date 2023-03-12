@@ -32,7 +32,7 @@
                             <div class="col-6 p-0 el-color-block">
                             <p class="c-white"><?=$row['activities_subtitle'];?></p>
                                 <h2 class="h5 c-white"><?=$row['activities_title'];?></h2>
-                                <a :href="/activity-content-step-1/'+item.id" class="btn btn-white rounded-pill px-4 b-hover-white">我要預約</a>
+                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white rounded-pill px-4 b-hover-white">我要預約</a>
                             </div>
                         </div>
                     </div>

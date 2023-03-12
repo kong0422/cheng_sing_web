@@ -35,7 +35,7 @@
                             <div class="activity-block">
                                 <h5 class="c-white font-weight-bold"><?=$row['activities_title'];?></h5>
                                 <p class="c-white"><?=$row['activities_subtitle'];?></p>
-                                <a href="<?="{$website_url}activity/{$row['id']}")?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
+                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
                                     我要報名<i class="fas fa-arrow-right"></i>
                                 </a>
                                 <img src="<?="{$storage_url}pic/{$row['activities_icon2']}";?>" alt="<?=$row['activities_title'];?>" class="activity-icon">
@@ -54,7 +54,7 @@
                             <div class="activity-block">
                             <h5 class="c-white font-weight-bold"><?=$row['activities_title'];?></h5>
                                 <p class="c-white"><?=$row['activities_subtitle'];?></p>
-                                <a href="<?="{$website_url}activity/{$row['id']}";?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
+                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
                                     我要報名<i class="fas fa-arrow-right"></i>
                                 </a>
                                 <img src="<?="{$storage_url}pic/{$row['activities_icon2']}";?>" alt="<?=$row['activities_title'];?>" class="activity-icon">

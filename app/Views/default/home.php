@@ -92,7 +92,7 @@
                             <div class="col-md-6 p-0 el-color-block" style="background-color: <?=$row['color'];?>;">
                                 <p class="c-white"><?=$row['activities_subtitle'];?></p>
                                 <h2 class="c-white"><?=$row['activities_title'];?></h2>
-                                <a href="<?="{$website_url}activity/{$row['id']}";?>" class="btn btn-white rounded-pill px-4 b-hover-white">我要預約</a>
+                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white rounded-pill px-4 b-hover-white">我要預約</a>
                             </div>
                         </div>
                     </div>
@@ -181,13 +181,13 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-6 p-0 bg-yellow d-flex-abcenter flex-column el-color-block2">
-                                    <a href="<?="{$website_url}activity/{$home['ticketIndex']['activity_id']}";?>" class="text-center s-hover w-100">
+                                    <a href="/activity/<?=$home['ticketIndex']['activity_id'];?>" class="text-center s-hover w-100">
                                         <img src="img/img-vip.svg" alt="" class="mb-4" style="width: 40%;height: auto;">
                                         <h2 class="c-white">會員免費索票</h2>
                                     </a>
                                 </div>
                                 <div class="col-md-6 p-0 bg-red d-flex-abcenter flex-column el-color-block2">
-                                <a href="<?="{$website_url}member/";?>" class="text-center s-hover w-100">
+                                <a href="/member/" class="text-center s-hover w-100">
                                         <img src="img/img-click.svg" alt="" class="mb-4" style="width: 40%;height: auto;">
                                         <h2 class="c-white">加入會員</h2>
                                     </a>
@@ -209,7 +209,7 @@
                 <div class="row">
                     <?php foreach ($home['activity'] as $row) { ?>
                     <div class="col-md-2 col-all-news" v-for="(item, index) in activity" :key='index'>
-                        <a :href="'activity-content-step-1/'+item.id" class="s-hover">
+                    <a href="/activity/<?=$row['id'];?>" class="s-hover">
                             <span>
                                 <img src="<?="{$website_url}img/{$row['activities_icon1']}";?>" alt="<?=$row['activities_title'];?>" class="mb-3">
                             </span>
@@ -275,7 +275,7 @@
                             <div class="activity-block">
                                 <h5 class="c-white font-weight-bold"><?=$row['activities_title'];?></h5>
                                 <p class="c-white"><?=$row['activities_subtitle'];?></p>
-                                <a href="<?="{$website_url}activity/{$row['id']}";?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
+                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
                                     我要報名<i class="fas fa-arrow-right"></i>
                                 </a>
                                 <img src="<?="{$storage_url}pic/{$row['activities_icon2']}";?>" alt="<?=$row['activities_title'];?>" class="activity-icon">
@@ -294,7 +294,7 @@
                             <div class="activity-block">
                                 <h5 class="c-white font-weight-bold"><?=$row['activities_title'];?></h5>
                                 <p class="c-white"><?=$row['activities_subtitle'];?></p>
-                                <a href="<?="{$website_url}/activity/{$row['id']}";?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
+                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white b-hover-white c-white rounded-pill btn-join">
                                     我要報名<i class="fas fa-arrow-right"></i>
                                 </a>
                                 <img src="<?="{$storage_url}pic/{$row['activities_icon2']}";?>" alt="<?=$row['activities_title'];?>" class="activity-icon">
@@ -341,7 +341,7 @@
                         <div class="swiper-wrapper">
                             <?php foreach ($home['exhibitions'] as $row) { ?>
                             <div class="swiper-slide" style="width: 220px;">
-                                <a :href="item.exhibition_classes_url">
+                            <a href="<?=$row['exhibition_classes_url'];?>">
                                     <div class="wrapper flex flex-column border border-secondary mx-auto overflow-hidden" style="width: 200px;">
                                         <div class="img-box bg-verylightgrey" style="width: 200px; height: 150px;">
                                             <img src="<?="{$storage_url}pic/{$row['exhibitions_file']}";?>" alt="<?=$row['exhibitions_name'];?>" class="w-100 h-100" style="object-fit: cover;">

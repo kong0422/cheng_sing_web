@@ -44,7 +44,7 @@
                             <p class="mb-3 text-truncate-3 c-<?=$color;?>">
                                 <?=strip_tags($row['news_content']);?>
                             </p>
-                            <a href="<?="{$website_url}news/{$row['id']}";?>" class="btn btn-<?=$color;?>-bd rounded-pill px-4">
+                            <a href="/news/<?=$row['id'];?>" class="btn btn-<?=$color;?>-bd rounded-pill px-4">
                                 <?=$row['news_url_name'];?>
                             </a>
                         </div>

@@ -65,9 +65,9 @@ abstract class BaseController extends Controller
 
         $this->website_url = "https://{$_SERVER['HTTP_HOST']}/";
         if (getenv('CI_ENVIRONMENT') == 'development') {
-            $this->website_url = 'https://babymama-txg.cheng-sing.com/';
+            // $this->website_url = 'https://babymama-txg.cheng-sing.com/';
             // $this->website_url = 'https://travel.cheng-sing.com/';
-            // $this->website_url = 'https://babymama-tnn.cheng-sing.com/';
+            $this->website_url = 'https://babymama-tnn.cheng-sing.com/';
         }
 
         $this->ticket_member_url = getenv('app.TicketMemberUrl');

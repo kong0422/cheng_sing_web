@@ -21,6 +21,15 @@ class Activity extends BaseController
         $this->data['news_list'] = $res['newsLists'];
         $this->data['coupon_list'] = $res['couponLists'];
 
+        // set signup url
+        $this->data['ticket_event_url'] = NULL;
+        if (isset($this->data['activity']['ticket_event_url'])
+            && $this->data['activity']['ticket_event_url']
+            && $this->data['activity']['ticket_event_url'] !='undefined')
+        {
+            $this->data['ticket_event_url'] = $this->data['activity']['ticket_event_url'];
+        }
+
         // $this->data['activity'] = $this->api->getActivityById($id);
         // $this->data['news_list'] = $this->api->getNews();
         // $this->data['coupon_list'] = $this->api->getActivitySignUp($activities_class=2);

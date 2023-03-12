@@ -31,5 +31,10 @@ class Home extends BaseController
         dd($data);
 
     }
+    public function privacy()
+    {
+
+        return view("{$this->template}/privacy", $this->data);
+    }
 
 }

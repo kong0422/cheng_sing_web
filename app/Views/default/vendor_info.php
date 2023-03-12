@@ -47,7 +47,7 @@
                     <?php foreach ($vendor_list as $index => $row) { ?>
                     <div class="slide" v-for="(item,index) in vendor" :key="index">
                         <div class="img-box w-100">
-                            <a href="<?="{$website_url}vendor/{$row['id']}";?>">
+                            <a href="/vendor/<?=$row['id'];?>">
                                 <img src="<?="{$storage_url}vendor/{$row['vendors_logo']}";?>" alt="<?=$row['vendors_name'];?>" class="w-100 vendor-obj">
                             </a>
                         </div>
