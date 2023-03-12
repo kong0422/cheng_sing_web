@@ -74,8 +74,8 @@
                             <!-- <a href="javascript:;" @click="login" class="btn btn-pink px-5 py-3 mb-4" style="border-radius: 8px;">請先登入</a> -->
                             <center>
                                 <?php if ($ticket_event_url) { ?>
-                                <iframe src="<?=$ticket_event_url;?>?iframe=1" height="700" width="100%" style="border: 0px solid #ccc;"></iframe>
-                                <!-- <a href="<?=$activity['ticket_event_url'];?>" class="btn btn-pink px-5 py-3 mb-4" style="border-radius: 8px;">立即報名</a> -->
+                                <!-- <iframe src="<?=$ticket_event_url;?>?iframe=1" height="700" width="100%" style="border: 0px solid #ccc;"></iframe> -->
+                                <a href="<?=$ticket_event_url;?>" class="btn btn-pink px-5 py-3 mb-4" style="border-radius: 8px;">立即報名</a>
                                 <?php } else { ?>
                                 <a href="javascript.void();" class="btn btn-grey px-5 py-3 mb-4" style="border-radius: 8px;">請先設定票券系統活動報名網址</a>
                                 <?php } ?>

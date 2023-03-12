@@ -12,12 +12,14 @@
                     <a href="/news">最新消息</a>
                     <!-- <a href="/coupon">好康優惠</a> -->
                     <a href="/activity">大會活動</a>
-                    <a href="/member">會員專區</a>
+                    <!-- <a href="/member">會員專區</a> -->
                     <a href="/vendor">參與廠商</a>
                     <a href="/contact">聯絡我們</a> <a href="/faq">常見Q&amp;A</a>
                     <!-- <a href="/member" class="btn btn-purple rounded-pill">登入/新會員註冊</a> -->
                     <div class="member my-auto">
-                        <div><a href="/member" class="c-pink c-hover-heavypink"><img src="/assets/img/member.svg" alt="" class="mr-2" style="width: 35px;">會員中心
+                        <div>
+                        <a href="<?=$ticket_member_url;?>" target="_blank" class="c-pink c-hover-heavypink">
+                                <img src="/assets/img/member.svg" alt="" class="mr-2" style="width: 35px;">會員中心
                             </a>
                         </div>
                     </div>
