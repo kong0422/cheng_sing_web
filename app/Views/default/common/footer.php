@@ -4,7 +4,9 @@
             <div class="col-12">
                 <div class="navbar-logo ">
                     <a href="/" class="navbar-brand">
-                        <img src="/assets/img/BMlogo.svg" alt="" style="width: 250px;"></a>
+                        <!-- <img src="/assets/img/BMlogo.svg" alt="" style="width: 250px;"> -->
+                        <img src="<?="{$storage_url}pic/{$exhibition['exhibition_classes_logo']}";?>" alt="<?=$meta['title'];?>" style="max-height: 60px;">
+                    </a>
                 </div>
             </div>
         </div>
@@ -13,7 +15,7 @@
                 <div class="text-box">
                     <h3>展覽位置</h3>
                     <p class="c-lightgrey mt-4 lh-1_6 white-space text-wrap">
-                        展覽地點：<?=$locations[$exhibition['exhibition_classes_area'].$exhibition['exhibition_classes_location']];?>
+                        展覽地點：<?=$exhibition['exhibition_location'];?>
                         <br>展館地址：<?=$exhibition['exhibition_classes_address'];?>
                         <br>展覽時間：<?=$exhibition['exhibitions_sdate'];?> ~ <?=$exhibition['exhibitions_edate'];?>
                         <br>主辦單位：承興國際展覽

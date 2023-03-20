@@ -6,7 +6,10 @@
             <nav class="navbar-des navbar navbar-expand">
                 <div class="navbar-nav">
                     <div class="navbar-logo ">
-                        <a href="/" class="navbar-brand"><img src="/assets/img/BMlogo.svg" alt="" style="width: 180px;"></a>
+                        <!-- <a href="/" class="navbar-brand"><img src="/assets/img/BMlogo.svg" alt="" style="width: 180px;"></a> -->
+                        <a href="/" class="navbar-brand">
+                            <img src="<?="{$storage_url}pic/{$exhibition['exhibition_classes_logo']}";?>" alt="<?=$meta['title'];?>" style="max-height: 40px;">
+                        </a>
                     </div>
                     <a href="/exhibition">展覽資訊</a>
                     <a href="/news">最新消息</a>
@@ -18,7 +21,7 @@
                     <!-- <a href="/member" class="btn btn-purple rounded-pill">登入/新會員註冊</a> -->
                     <div class="member my-auto">
                         <div>
-                        <a href="<?=$ticket_member_url;?>" target="_blank" class="c-pink c-hover-heavypink">
+                            <a href="<?=$ticket_member_url;?>" target="_blank" class="c-pink c-hover-heavypink">
                                 <img src="/assets/img/member.svg" alt="" class="mr-2" style="width: 35px;">會員中心
                             </a>
                         </div>
@@ -49,12 +52,12 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse navbar-menu-bar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a href="/" class="nav-link">首頁</a></li>
-                <li class="nav-item"><a href="/exhibition-info" class="nav-link">展覽資訊</a></li>
-                <li class="nav-item"><a href="/latest-news-main-page" class="nav-link">最新消息</a></li>
-                <li class="nav-item"><a href="/coupon-main-page" class="nav-link">好康優惠</a></li>
-                <li class="nav-item"><a href="/activity-main-page" class="nav-link">大會活動</a></li>
-                <li class="nav-item"><a href="/member-profile" class="nav-link">會員專區</a></li>
-                <li class="nav-item"><a href="/vendor-main-page" class="nav-link">參與廠商</a></li>
+                <li class="nav-item"><a href="/exhibition" class="nav-link">展覽資訊</a></li>
+                <li class="nav-item"><a href="/news" class="nav-link">最新消息</a></li>
+                <!-- <li class="nav-item"><a href="/coupon" class="nav-link">好康優惠</a></li> -->
+                <li class="nav-item"><a href="/activity" class="nav-link">大會活動</a></li>
+                <!-- <li class="nav-item"><a href="/member" class="nav-link">會員專區</a></li> -->
+                <li class="nav-item"><a href="/vendor" class="nav-link">參與廠商</a></li>
                 <li class="nav-item"><a href="/contact" class="nav-link">聯絡我們</a></li>
                 <li class="nav-item"><a href="/faq" class="nav-link">常見Q&amp;A</a></li>
             </ul>

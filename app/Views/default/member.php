@@ -10,10 +10,10 @@
     <div class="main">
         <!-- <section class="hero-img"> -->
         <!--     <div class="container hero-img-desktop"> -->
-        <!--         <div class="row"><img src="<?="{$storage_url}pic/{$cover['pic']}";?>" alt="<?=$meta['title'];?>"></div> -->
+        <!--         <div class="row"><img src="<?=$cover_pic;?>" alt="<?=$meta['title'];?>"></div> -->
         <!--     </div> -->
         <!--     <div class="container hero-img-mob"> -->
-        <!--         <div class="row"><img src="<?="{$storage_url}pic/{$cover['mpic']}";?>" alt="<?=$meta['title'];?>"></div> -->
+        <!--         <div class="row"><img src="<?=$cover_mpic;?>" alt="<?=$meta['title'];?>"></div> -->
         <!--     </div> -->
         <!-- </section> -->
         <div class="container px-0">

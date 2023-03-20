@@ -92,7 +92,7 @@
                             <div class="col-md-6 p-0 el-color-block" style="background-color: <?=$row['color'];?>;">
                                 <p class="c-white"><?=$row['activities_subtitle'];?></p>
                                 <h2 class="c-white"><?=$row['activities_title'];?></h2>
-                                <a href="/activity/<?=$row['id'];?>" class="btn btn-white rounded-pill px-4 b-hover-white">我要預約</a>
+                                <a href="/activity/<?=$row['activities_id'];?>" class="btn btn-white rounded-pill px-4 b-hover-white">我要預約</a>
                             </div>
                         </div>
                     </div>
@@ -181,13 +181,20 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-6 p-0 bg-yellow d-flex-abcenter flex-column el-color-block2">
+                                    <?php if (isset($home['ticketIndex']['activity_id'])) { ?>
                                     <a href="/activity/<?=$home['ticketIndex']['activity_id'];?>" class="text-center s-hover w-100">
                                         <img src="img/img-vip.svg" alt="" class="mb-4" style="width: 40%;height: auto;">
                                         <h2 class="c-white">會員免費索票</h2>
                                     </a>
+                                    <?php } else { ?>
+                                    <a href="javascript: void(0);" class="text-center s-hover w-100">
+                                        <img src="img/img-vip.svg" alt="" class="mb-4" style="width: 40%;height: auto;">
+                                        <h2 class="c-white">未設定索票</h2>
+                                    </a>
+                                    <?php }  ?>
                                 </div>
                                 <div class="col-md-6 p-0 bg-red d-flex-abcenter flex-column el-color-block2">
-                                <a href="/member/" class="text-center s-hover w-100">
+                                    <a href="<?=$ticket_member_url;?>" class="text-center s-hover w-100">
                                         <img src="img/img-click.svg" alt="" class="mb-4" style="width: 40%;height: auto;">
                                         <h2 class="c-white">加入會員</h2>
                                     </a>
@@ -211,7 +218,7 @@
                     <div class="col-md-2 col-all-news" v-for="(item, index) in activity" :key='index'>
                     <a href="/activity/<?=$row['id'];?>" class="s-hover">
                             <span>
-                                <img src="<?="{$website_url}img/{$row['activities_icon1']}";?>" alt="<?=$row['activities_title'];?>" class="mb-3">
+                                <img src="/assets/img/<?=$row['activities_icon1'];?>" alt="<?=$row['activities_title'];?>" class="mb-3">
                             </span>
                             <p><?=$row['activities_title'];?></p>
                         </a>
@@ -267,7 +274,8 @@
                 </div>
                 <div class="row row-mommy" v-show="moms!=''">
                     <div class="col-md-3 col-sm-6 col-top-flag">
-                        <img src="/assets/img/img-activity-mommy.png" alt="">
+                        <!-- <img src="/assets/img/img-activity-mommy.png" alt=""> -->
+                        <img src="<?="{$storage_url}pic/{$exhibition['exhibition_classes_activity_pic1']}";?>" alt="">
                     </div>
                     <?php foreach ($home['moms'] as $row) { ?>
                     <div class="col-md-3 col-sm-6">
@@ -286,7 +294,8 @@
                 </div>
                 <div class="row row-baby" v-show="babies!=''">
                     <div class="col-md-3 col-sm-6 col-top-flag">
-                        <img src="assets/img/img-activity-baby.png" alt="">
+                        <!-- <img src="assets/img/img-activity-baby.png" alt=""> -->
+                        <img src="<?="{$storage_url}pic/{$exhibition['exhibition_classes_activity_pic2']}";?>" alt="">
                     </div>
                     <?php foreach ($home['babies'] as $row) { ?>
                     <div class="col-md-3 col-sm-6">
@@ -389,4 +398,9 @@
 
 
 <?= $this->section('javascript') ?>
+<?php if ($jsonld) { ?>
+<script type="application/ld+json">
+    <?=$jsonld;?>
+</script>
+<?php } ?>
 <?= $this->endSection() ?>
