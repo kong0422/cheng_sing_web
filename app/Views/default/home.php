@@ -7,6 +7,7 @@
 <?= $this->section('content') ?>
     <?= $this->include("{$template}/common/header") ?>
     <div class="main">
+        <?php if (isset($home['banner']) && $home['banner']) { ?>
         <section class="index-carousel">
             <div class="container">
                 <div class="js-slideshowIndex">
@@ -78,8 +79,9 @@
                     <?php } ?>
                 </div>
             </div>
-
         </section>
+        <?php } ?>
+
         <section class="color-block">
             <div class="container">
                 <div class="row">
@@ -205,7 +207,9 @@
                 </div>
             </div>
         </section>
-        <section class="all-news" v-show="activity!=''">
+
+        <?php if ($home['activity']) { ?>
+        <section class="all-news">
             <div class="container">
                 <div class="row">
                     <div class="col-12 p-0 text-center">
@@ -227,7 +231,10 @@
                 </div>
             </div>
         </section>
-        <section class="latest-news" v-show="news!=''">
+        <?php } ?>
+
+        <?php if ($home['news']) { ?>
+        <section class="latest-news">
             <div class="container">
                 <div class="row">
                     <div class="col-12 p-0 text-center">
@@ -235,6 +242,7 @@
                         <hr>
                     </div>
                 </div>
+                <?php if ($home['news']) { ?>
                 <div class="row mt-5 justify-content-start">
                     <?php
                         foreach ($home['news'] as $index => $row) {
@@ -248,7 +256,7 @@
                     ?>
                     <div class="col-md-4 px-1 mb-4">
                         <div class="bd-<?=$color;?> d-flex flex-column align-items-center py-5 px-3 h-100">
-                            <img src="/assets/img/ln08.svg" alt="<?=$row['news_title'];?>" class="w-20 bg-<?=$color;?> mb-4">
+                            <img src="/assets/img/<?=$row['news_icon'];?>" alt="<?=$row['news_title'];?>" class="w-20 bg-<?=$color;?> mb-4">
                             <span class="d-h5 c-<?=$color;?>">[一般]</span>
                             <h5 class="mb-3 c-<?=$color;?>"><?=$row['news_title'];?></h5>
                             <p class="mb-3 text-truncate-3 c-<?=$color;?>">
@@ -261,10 +269,13 @@
                     </div>
                     <?php } ?>
                 </div>
+                <?php } ?>
             </div>
         </section>
+        <?php } ?>
 
-        <section class="activity" v-show="moms!='' || babies!=''">
+        <?php if ($home['moms'] || $home['babies']) { ?>
+        <section class="activity">
             <div class="container">
                 <div class="row">
                     <div class="col-12 p-0 text-center">
@@ -272,7 +283,8 @@
                         <hr>
                     </div>
                 </div>
-                <div class="row row-mommy" v-show="moms!=''">
+                <?php if ($home['moms']) { ?>
+                <div class="row row-mommy">
                     <div class="col-md-3 col-sm-6 col-top-flag">
                         <!-- <img src="/assets/img/img-activity-mommy.png" alt=""> -->
                         <img src="<?="{$storage_url}pic/{$exhibition['exhibition_classes_activity_pic1']}";?>" alt="">
@@ -292,7 +304,9 @@
                     </div>
                     <?php } ?>
                 </div>
-                <div class="row row-baby" v-show="babies!=''">
+                <?php } ?>
+                <?php if ($home['babies']) { ?>
+                <div class="row row-baby">
                     <div class="col-md-3 col-sm-6 col-top-flag">
                         <!-- <img src="assets/img/img-activity-baby.png" alt=""> -->
                         <img src="<?="{$storage_url}pic/{$exhibition['exhibition_classes_activity_pic2']}";?>" alt="">
@@ -312,9 +326,12 @@
                     </div>
                     <?php } ?>
                 </div>
+                <?php } ?>
             </div>
         </section>
+        <?php } ?>
 
+        <?php if ($home['vendor']) { ?>
         <section class="vendor">
             <div class="container">
                 <div class="row">
@@ -336,8 +353,10 @@
                 </div>
             </div>
         </section>
+        <?php } ?>
 
-        <div class="other-exhibition" v-show="exhibitions!=''">
+        <?php if ($home['exhibitions']) { ?>
+        <div class="other-exhibition">
             <div class="container mb-4">
                 <div class="row">
                     <div class="col-12 p-0 text-center">
@@ -349,6 +368,7 @@
                     <div class="js-slideshowOtherExhi swiper-container">
                         <div class="swiper-wrapper">
                             <?php foreach ($home['exhibitions'] as $row) { ?>
+                            <?php if ($row['exhibitions_edate'] >= date('Y-m-d')) { ?>
                             <div class="swiper-slide" style="width: 220px;">
                             <a href="<?=$row['exhibition_classes_url'];?>">
                                     <div class="wrapper flex flex-column border border-secondary mx-auto overflow-hidden" style="width: 200px;">
@@ -364,10 +384,12 @@
                                 </a>
                             </div>
                             <?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
 
         <?php if (isset($home['popup']['status']) && $home['popup']['status'] == '打開' ) { ?>

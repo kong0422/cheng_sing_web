@@ -29,7 +29,7 @@
                     <div class="col-12">
                         <div class="vendor-content">
                             <div class="img-box w-100 text-center">
-                                <img src="<?="{$storage_url}vendor/{$vendor['vendors_logo']}";?>" alt="<?=$vendor['vendors_name'];?>" class="w-100">
+                                <img src="<?="{$storage_url}vendor/{$vendor['vendors_pic']}";?>" alt="<?=$vendor['vendors_name'];?>" class="w-100">
                             </div>
                             <p class="my-4"><?=$vendor['vendors_content'];?></p>
                         </div>

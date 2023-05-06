@@ -38,7 +38,7 @@
                     ?>
                     <div class="col-md-4 px-1 mb-4">
                         <div class="bd-<?=$color;?> d-flex flex-column align-items-center py-5 px-3 h-100">
-                            <img src="/assets/img/ln08.svg" alt="<?=$row['news_title'];?>" class="w-20 bg-<?=$color;?> mb-4">
+                            <img src="/assets/img/<?=$row['news_icon'];?>" alt="<?=$row['news_title'];?>" class="w-20 bg-<?=$color;?> mb-4">
                             <span class="d-h5 c-<?=$color;?>">[一般]</span>
                             <h5 class="mb-3 c-<?=$color;?>"><?=$row['news_title'];?></h5>
                             <p class="mb-3 text-truncate-3 c-<?=$color;?>">

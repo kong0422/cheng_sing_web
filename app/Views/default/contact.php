@@ -55,7 +55,6 @@
                     </div>
                     <div class="col-md-8">
                         <form id="contact_form" method="post">
-                            <input type="hidden" name="google_recaptcha_token" value="">
                             <input type="hidden" name="url" value="<?=$website_url;?>">
                             <div class="form-wrapper">
                                 <div class="form-row align-items-center">
@@ -76,7 +75,7 @@
                                         <div id="grecaptcha" data-theme="light"></div>
                                     </div>
                                     <div class="col-auto mb-4">
-                                        <button type="button" class="btn btn-pink px-5 float-md-right" style="height: 44px;letter-spacing: 2px;">送出訊息</button>
+                                        <button type="button" class="btn btn-pink px-5 float-md-right" onclick="send()" style="height: 44px;letter-spacing: 2px;">送出訊息</button>
                                     </div>
                                 </div>
                             </div>
@@ -92,59 +91,62 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('javascript') ?>
-<script src='https://www.google.com/recaptcha/api.js?render=explicit'></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&#38;render=explicit" async defer></script> -->
 <script>
 var is_disable = false;
 var google_recaptcha_token = null;
 $(function(){
-    $('#contact_form button').on('click', function(){
-        send();
-    });
-
-    setTimeout(() => {
-        window.grecaptcha.render("grecaptcha", {
-            sitekey: '<?=$google_recaptcha_key;?>',
-            size:20,
-            callback: callbackGoogleToken()
-        });
-    }, 200);
-
 });
-var callbackGoogleToken = function(token){
-    google_recaptcha_token = token;
+var onloadCallback = function() {
+  grecaptcha.render('grecaptcha', {
+    'sitekey': '<?=$google_recaptcha_key;?>',
+    'theme': 'light',
+    'size': 'normal',
+    'callback': verifyCallback,
+    //'expired-callback': expired,
+    //'error-callback': error
+  });
+  function verifyCallback(token) {
+    // 把 token 跟 ip 送到後端做驗
+	 google_recaptcha_token = token
+  }
 }
 var send = function() {
-    is_disable = true;
     if (google_recaptcha_token == ''){
         alert('請先驗證我不是機器人!')
     } else {
-        const url = '<?=$api_url;?>contact'
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: $('#contact_form').serialize(),
-            success: function(res) {
-                console.log(res)
-                if (res.data.code == 2){
-                    alert(res.msg)
-                    $('#contact_form [name=name]').val();
-                    $('#contact_form [name=sex]:checked').prop('checkec', false);
-                    $('#contact_form [name=email]').val();
-                    $('#contact_form [name=phone]').val();
-                    $('#contact_form [name=content]').val();
-                } else if (res.code == 3){
-                    alert(res.msg)
-                }else{
+
+        if (is_disable === false) {
+            is_disable = true;
+            const url = '<?=$api_url;?>contact'
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: $('#contact_form').serialize(),
+                success: function(res) {
+                    console.log(res)
+                    if (res.code == 2){
+                        alert(res.msg)
+                        // $('#contact_form [name=name]').val();
+                        // $('#contact_form [name=sex]:checked').prop('checkec', false);
+                        // $('#contact_form [name=email]').val();
+                        // $('#contact_form [name=phone]').val();
+                        // $('#contact_form [name=content]').val();
+                    } else if (res.code == 3){
+                        alert(res.msg)
+                    }else{
+                        alert('認證失敗!')
+                    }
+                    is_disable = false;
+                },
+                error: function(res) {
+                    console.log(res)
                     alert('認證失敗!')
+                    is_disable = false;
                 }
-            },
-            error: function(res) {
-                console.log(res)
-                alert('認證失敗!')
-            }
-        });
+            });
+        }
     }
-    is_disable = false;
 }
 </script>
 <?= $this->endSection() ?>

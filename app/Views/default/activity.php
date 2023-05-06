@@ -25,6 +25,8 @@
                         <hr>
                     </div>
                 </div>
+
+                <?php if ($activity_list['moms']) { ?>
                 <div class="row row-mommy">
                     <div class="col-md-3 col-6 col-top-flag">
                         <!-- <img src="/assets/img/img-activity-mommy.png" alt=""> -->
@@ -45,6 +47,9 @@
                     </div>
                     <?php } ?>
                 </div>
+                <?php } ?>
+
+                <?php if ($activity_list['babies']) { ?>
                 <div class="row row-baby">
                     <div class="col-md-3 col-6 col-top-flag">
                         <!-- <img src="/assets/img/img-activity-baby.png" alt=""> -->
@@ -65,6 +70,8 @@
                     </div>
                     <?php } ?>
                 </div>
+                <?php } ?>
+
             </div>
         </section>
     </div>

@@ -25,25 +25,11 @@
     </head>
 
     <body cz-shortcut-listen="true">
-        <!-- &#60;&#33;&#45;&#45; Google Tag Manager &#45;&#45;&#62; -->
-        <!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NRV2X3H" -->
-        <!-- height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': -->
-        <!-- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], -->
-        <!-- j=d.createElement(s),dl=l!='dataLayer'?'&#38;l='+l:'';j.async=true;j.src= -->
-        <!-- '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); -->
-        <!-- })(window,document,'script','dataLayer','GTM-NRV2X3H');</script> -->
-        <!-- &#60;&#33;&#45;&#45; End Google Tag Manager &#45;&#45;&#62; -->
-        <!--  -->
-        <!-- &#60;&#33;&#45;&#45; Google Tag Manager &#45;&#45;&#62; -->
-        <!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5JZCBCP" -->
-        <!-- height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-        <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': -->
-        <!-- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], -->
-        <!-- j=d.createElement(s),dl=l!='dataLayer'?'&#38;l='+l:'';j.async=true;j.src= -->
-        <!-- '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); -->
-        <!-- })(window,document,'script','dataLayer','GTM-5JZCBCP');</script> -->
-        <!-- &#60;&#33;&#45;&#45; End Google Tag Manager &#45;&#45;&#62; -->
+        <?php
+            if (isset($exhibition['exhibition_classes_google_gtm'])) {
+                echo $exhibition['exhibition_classes_google_gtm'];
+            }
+        ?>
 
         <?= $this->renderSection('content') ?>
     </body>

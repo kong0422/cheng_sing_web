@@ -49,7 +49,7 @@ abstract class BaseController extends Controller
         "11" => "台北世貿一館",
         "12" => "圓山爭艷館",
         "13" => "新竹市立體育館",
-        "21" => "臺中國際展覽館",
+        "21" => "台中世界貿易中心",
         "22" => "新竹市立體育館",
         "31" => "台南南紡世貿展覽中心",
         "32" => "高雄國際會議中心",
@@ -76,11 +76,11 @@ abstract class BaseController extends Controller
 
         $this->website_url = "https://{$_SERVER['HTTP_HOST']}/";
         if (getenv('CI_ENVIRONMENT') == 'development') {
-            // $this->website_url = 'https://babymama-txg.cheng-sing.com/';
+            $this->website_url = 'https://babymama-txg.cheng-sing.com/';
             // $this->website_url = 'https://travel.cheng-sing.com/';
-            $this->website_url = 'https://babymama-tnn.cheng-sing.com/';
+            // $this->website_url = 'https://babymama-tnn.cheng-sing.com/';
             // $this->website_url = 'https://demo.cheng-sing.com/';
-            $this->website_url = 'https://hsinchu-travel.cheng-sing.com';
+            // $this->website_url = 'https://hsinchu-travel.cheng-sing.com';
         }
 
         $this->ticket_member_url = getenv('app.TicketMemberUrl');
@@ -97,7 +97,11 @@ abstract class BaseController extends Controller
         ]);
 
         $this->exhibition = $this->api->getExhibitionInfo();
-        $this->exhibition['exhibition_location'] = @$this->locations[$this->exhibition['exhibition_classes_area'].$this->exhibition['exhibition_classes_location']];
+        if (!$this->exhibition) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('尚未設定展覽資訊');
+        }
+
+        $this->exhibition['exhibition_location'] = $this->locations[$this->exhibition['exhibition_classes_area'].$this->exhibition['exhibition_classes_location']];
 
         $this->template = 'default';
         if ($this->exhibition['exhibition_classes_template'] && $this->exhibition['exhibition_classes_template'] != 'null') {
